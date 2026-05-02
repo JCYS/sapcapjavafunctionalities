@@ -1,0 +1,20 @@
+
+---
+spring:
+  config:
+    activate:
+      on-profile: default
+  sql:
+    init:
+      platform: h2
+cds:
+  remote.services:
+    '[API_BUSINESS_PARTNER]':
+      type: "odata-v2"
+      http:
+        headers:
+          APIKey: "bPSPgGhagAMR1yI5FWGNg5rT3bUJTwQz" # Place API Key from SAP API Business Hub here or use environment variable CDS_REMOTE_SERVICES_API_BUSINESS_PARTNER_HTTP_HEADERS_APIKEY
+      destination:
+        properties:
+          url: "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap"
+
